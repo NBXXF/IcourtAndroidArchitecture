@@ -1,0 +1,79 @@
+ext {
+
+    android = [
+            compileSdkVersion: 27,
+            buildToolsVersion: "27.0.0",
+            minSdkVersion    : 17,
+            targetSdkVersion : 27
+    ]
+
+    dependVersion = [
+            support: "27.0.2"
+    ]
+
+
+    dependencies = [
+            //------------- 分包  ------------
+            multidex                  : "com.android.support:multidex:1.0.2",
+
+            //---------------bug 反馈----------------
+            bugtags                   : "com.bugtags.library:bugtags-lib:latest.integration",
+
+            // ------------- Android -------------
+            supportV4                 : "com.android.support:support-v4:${dependVersion.support}",
+            supportAnnotations        : "com.android.support:support-annotations:${dependVersion.support}",
+            appcompatV7               : "com.android.support:appcompat-v7:${dependVersion.support}",
+            design                    : "com.android.support:design:${dependVersion.support}",
+            cardview                  : "com.android.support:cardview-v7:${dependVersion.support}",
+            junit                     : "junit:junit:4.12",
+            supportTestEspresso       : "com.android.support.test.espresso:espresso-core:3.0.1",
+
+            // ------------- reyclerview ------------
+            recyclerview              : "com.android.support:recyclerview-v7:${dependVersion.support}",
+            recyclerview_animators    : "jp.wasabeef:recyclerview-animators:2.2.6",
+            recyclerview_divider      : "com.yqritc:recyclerview-flexibledivider:1.4.0",
+
+            // ------------- 网络请求 -------------
+            retrofit                  : 'com.squareup.retrofit2:retrofit:2.3.0',
+            retrofit_rxjava           : 'com.squareup.retrofit2:adapter-rxjava2:2.3.0',
+            retrofit_converter_gson   : 'com.squareup.retrofit2:converter-gson:2.3.0',
+            okhttp_logging_interceptor: 'com.squareup.okhttp3:logging-interceptor:3.9.0',
+
+            // ------------- 图片加载 -------------
+            glide                     : 'com.github.bumptech.glide:glide:4.4.0',
+            glideAp                   : 'com.github.bumptech.glide:compiler:4.4.0',
+
+            // ------------- 通信 -------------
+            eventbus                  : 'org.greenrobot:eventbus:3.0.0',
+
+            // ------------- RxAndroid -------------
+            rxAndroid                 : 'io.reactivex.rxjava2:rxandroid:2.0.1',
+            rxJava                    : 'io.reactivex.rxjava2:rxjava:2.0.1',
+            rxLife                    : 'com.trello.rxlifecycle2:rxlifecycle:2.2.1',
+            rxLifeAndroid             : 'com.trello.rxlifecycle2:rxlifecycle-android:2.2.1',
+
+            // ------------- json解析 -------------
+            gson                      : 'com.google.code.gson:gson:2.8.2',
+
+            // ------------- log打印工具 -------------
+            logger                    : 'com.orhanobut:logger:2.1.1',
+
+            greendao                  : 'org.greenrobot:greendao:3.2.0',
+
+            // ------------- ButterKnife -------------
+            butterknife               : 'com.jakewharton:butterknife:8.4.0',
+            butterknifeCompiler       : 'com.jakewharton:butterknife-compiler:8.4.0',
+
+            // ------------- LeakCanary -------------
+            leakcanaryAndroid         : 'com.squareup.leakcanary:leakcanary-android:1.5',
+            leakcanaryAndroidNoOp     : 'com.squareup.leakcanary:leakcanary-android-no-op:1.5',
+
+            // ------------- 约束控件 -------------
+            constraintLayout          : 'com.android.support.constraint:constraint-layout:1.0.0-alpha7',
+            topsnackbar               : 'com.androidadvance:topsnackbar:1.1.1',
+            adapter                   : "com.asange.recyclerviewadapter:lib_recyclerview_adapter:1.1.1",
+
+
+    ]
+
+}

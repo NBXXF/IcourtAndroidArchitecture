@@ -1,0 +1,55 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        innertest {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        preview {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        innerrelease {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        innerrelease_daily {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //------------  网络请求  --------------
+    compile rootProject.ext.dependencies.retrofit
+    //com.trello.rxlifecycle2 已经包含rxjava了
+    compile(rootProject.ext.dependencies.retrofit_rxjava) {
+        exclude group: 'io.reactivex.rxjava2', module: 'rxjava'
+    }
+    compile rootProject.ext.dependencies.retrofit_converter_gson
+    compile rootProject.ext.dependencies.okhttp_logging_interceptor
+    //------------  json解析  --------------
+    compile rootProject.ext.dependencies.gson
+    //compile 'com.github.franmontiel:PersistentCookieJar:v1.0.0'
+    //compile 'com.squareup.retrofit2:converter-scalars:2.2.0'
+}
